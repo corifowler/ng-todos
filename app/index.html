@@ -11,22 +11,29 @@
     <h1>Tasks</h1>
     <hr>
     <section class="add-task">
+      <h3>Add a Task</h3>
       <form>
         <label>Priority Level</label>
-        <select>
+        <select ng-model="vm.task.priority">
           <option>High</option>
           <option>Regular</option>
           <option>Low</option>
         </select>
         <label>Task Name</label>
-        <input>
+        <input ng-model="vm.task.name">
         <label>Task Description</label>
-        <textarea></textarea>
-        <button>Add Task</button>
+        <textarea ng-model="vm.task.description"></textarea>
+        <button ng-click="vm.addTask(vm.task)" ng-hide="vm.editing">Add Task</button>
+        <button ng-click="vm.updateTask()" ng-show="vm.editing">Update Task</button>
+        <button ng-click="vm.deleteTask(vm.task)" ng-show="vm.editing">Delete Task</button>
       </form>
     </section>
     <section class="tasks">
-      this is to view list of tasks
+      <h3>Task List</h3>
+      <p ng-repeat="t in vm.taskList" ng-style="{'color': (t.priority === 'High') ? 'red' : 'black'}" ng-click="vm.editTask(t)">
+       {{t.name}} | {{t.description}}
+       <hr>
+      </p>
     </section>
   
   </div>

@@ -6398,6 +6398,7 @@ body {
   body .container .tasks {
     display: inline-block;
     width: 45%;
-    padding: 25px; }
+    padding: 25px;
+    float: right; }
 
 /*# sourceMappingURL=main.css.map */
