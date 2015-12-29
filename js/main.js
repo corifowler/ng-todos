@@ -1,5 +1,8 @@
-import $ from 'jquery';
-import _ from 'underscore';
-import moment from 'moment';
+import angular from 'angular';
 
-console.log('Hello, World');
+import TaskController from './controllers/taskcontroller';
+
+angular
+  .module('app', [])
+  .controller('TaskController', TaskController)
+;

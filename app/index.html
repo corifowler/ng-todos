@@ -7,7 +7,29 @@
 </head>
 <body>
 
-  <div ui-view></div>
+  <div class="container" ng-controller="TaskController as vm">
+    <h1>Tasks</h1>
+    <hr>
+    <section class="add-task">
+      <form>
+        <label>Priority Level</label>
+        <select>
+          <option>High</option>
+          <option>Regular</option>
+          <option>Low</option>
+        </select>
+        <label>Task Name</label>
+        <input>
+        <label>Task Description</label>
+        <textarea></textarea>
+        <button>Add Task</button>
+      </form>
+    </section>
+    <section class="tasks">
+      this is to view list of tasks
+    </section>
+  
+  </div>
   
   <script src="js/main.js"></script>
 </body>

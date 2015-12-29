@@ -4,4 +4,24 @@
 
 body {
   background: #e2ebf3;
+
+  .container {
+   
+    h1 {
+      text-align: center;
+    }
+
+    .add-task {
+      display: inline-block;
+      width: 45%;
+      padding: 25px;
+    }
+
+    .tasks {
+      display: inline-block;
+      width: 45%;
+      padding: 25px;
+    }  
+  }
+
 }
